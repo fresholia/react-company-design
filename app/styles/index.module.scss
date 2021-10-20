@@ -1,3 +1,5 @@
+$textColor: #5c5c5c;
+
 div.landingContent {
     display: flex;
     width: 100%;
@@ -51,6 +53,7 @@ div.landingContent {
         max-width: 40%;
         padding-top: 0;
         margin-top: 0;
+        color: $textColor;
     }
 
     img.headerImage {
@@ -72,6 +75,11 @@ div.ourServices {
         padding: 0;
         margin: 0;
         margin-top: 1rem;
+        span {
+            color: #d4d1d1;
+            font-weight: 200;
+            font-size: 1rem;
+        }
     }
 
     div.serverList {
@@ -92,6 +100,7 @@ div.ourServices {
             p {
                 padding: 0;
                 margin: 0;
+                color: $textColor;
             }
         }
     }
@@ -100,13 +109,36 @@ div.ourServices {
 div.longLabels {
     position: relative;
     padding-top: 2rem;
-
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #d4d1d1;
     div.absolutePath {
-        position: absolute;
         width: 100%;
-        left: 0;
-        top: 0;
-        height: 250px;
-        background: red;
-      }
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            width: 100%;
+            font-size: 9rem;
+            padding: 0;
+            margin: 0;
+            margin-bottom: -40px;
+            span {
+                text-decoration: line-through;
+                font-weight: 700;
+                color: $textColor;
+            }
+        }
+    }
+    h4 {
+        width: 100%;
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+    }
+    p {
+        max-width: 70%;
+        margin: 0 auto;
+        color: $textColor;
+    }
 }

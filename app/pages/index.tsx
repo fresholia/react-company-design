@@ -1,4 +1,4 @@
-import React, { Suspense } from "react"
+import React from "react"
 import { Image, Link, BlitzPage, useMutation, Routes, InferGetStaticPropsType } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
@@ -20,7 +20,7 @@ export async function getStaticProps(context) {
   }
 }
 
-const Home: BlitzPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: BlitzPage<{}> = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const totalPlayersCount: number = data ? data.total : 0
   return (
     <React.Fragment>
@@ -36,7 +36,7 @@ const Home: BlitzPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps
         </div>
 
         <div className={style.ourServices}>
-          <h4>hizmetlerimiz</h4>
+          <h4>hizmetlerimiz <span>(yoğunluğa göre sıralanır)</span> </h4>
           <div className={style.serverList}>
             {
               Object.keys(data).map(key => {
@@ -57,8 +57,11 @@ const Home: BlitzPage = ({ data }: InferGetStaticPropsType<typeof getStaticProps
         </div>
         <div className={style.longLabels}>
           <div className={style.absolutePath}>
-          
+            <h2>WE ARE DEVELOP</h2>
+            <h2><span>ROLEPLAY</span> GAMES</h2>
           </div>
+          <h4>Neler yapıyoruz?</h4>
+          <p>Oyun sunucuları, internet sayfaları, afiş tasarımları veya sosyal medya asistanlığı. Aklınıza gelebilecek her türlü teknolojik işleri hallediyoruz. Çünkü biz teknolojiden geliyoruz. Örneğin, internetten ürün mü satmak istiyorsunuz? Sizin için ödeme sayfası oluşturalım, verginiz ve faturanız otomatik kesilsin, keyfinize bakın! Yeni çağın yükselen teknolojisinden ancak Inception'u bilenler faydalanır! Detaylı bilgi için bize mail göndermeyi unutmayın.</p>
         </div>
       </div>
     </React.Fragment>

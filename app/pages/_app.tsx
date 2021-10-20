@@ -7,7 +7,9 @@ import {
   ErrorFallbackProps,
   useQueryErrorResetBoundary,
 } from "blitz"
+
 import LoginForm from "app/auth/components/LoginForm"
+import FooterLayout from "app/core/layouts/FooterLayout"
 
 import "app/styles/index.scss"
 
@@ -20,6 +22,8 @@ export default function App({ Component, pageProps }: AppProps) {
       onReset={useQueryErrorResetBoundary().reset}
     >
       {getLayout(<Component {...pageProps} />)}
+
+      <FooterLayout />
     </ErrorBoundary>
   )
 }
