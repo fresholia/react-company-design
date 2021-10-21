@@ -38,7 +38,7 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
             <div className={style.greenDot}></div>
             <span>Hizmetlerimizi anlık olarak {totalPlayersCount} kişi kullanıyor.</span>
           </div>
-          <img className={style.headerImage} src="right-content.png"></img>
+          <Image className={style.headerImage} src="right-content.png" alt="Content image" />
         </div>
 
         <div className={style.ourServices}>
@@ -50,7 +50,7 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
               if (key != "total") {
                 const row = data[key]
                 return (
-                  <div className={style.item}>
+                  <div key={key} className={style.item}>
                     <span>{row.name}</span>
                     <p>Platform: {row.platform}</p>
                     <p>Oyuncu: {row.players}</p>
@@ -74,8 +74,8 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
             Aklınıza gelebilecek her türlü teknolojik işleri hallediyoruz. Çünkü biz teknolojiden
             geliyoruz. Örneğin, internetten ürün mü satmak istiyorsunuz? Sizin için ödeme sayfası
             oluşturalım, verginiz ve faturanız otomatik kesilsin, keyfinize bakın! Yeni çağın
-            yükselen teknolojisinden ancak Inception'u bilenler faydalanır! Detaylı bilgi için bize
-            mail göndermeyi unutmayın.
+            yükselen teknolojisinden ancak bizi bilenler faydalanır! Detaylı bilgi için bize mail
+            göndermeyi unutmayın.
           </p>
         </div>
       </div>

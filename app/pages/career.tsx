@@ -7,24 +7,29 @@ import logout from "app/auth/mutations/logout"
 import style from "app/styles/career.module.scss"
 
 type openPosition = {
+  id: number
   name: string
   desc: string
 }
 
 const openPositions: openPosition[] = [
   {
+    id: 1,
     name: "Lua Developer (Remote)",
     desc: "Lua konusunda deneyimli, OOP, MVP konusunda bilgili, Docker ve Git kullanımını üst düzey bilen, günün belirli bir zamanını bize ayıracak part-time çalışma arkadaşları arıyoruz.",
   },
   {
+    id: 2,
     name: "Next.js Developer (Remote)",
     desc: "React konusunda deneyimli ve belirli projelerde bulunmuş, Blitz.js bilgisine sahip, Node.js kullanımını bilen, TypeScript ve JavaScript yazabilen çalışma arkadaşları arıyoruz.",
   },
   {
+    id: 3,
     name: "UI/UX Designer (Remote)",
     desc: "Paint kullanmasını bilen birisi işte.",
   },
   {
+    id: 4,
     name: "Human Resources (Tekirdağ)",
     desc: "İnsanlarla iletişimi güçlü, en az önlisans mezunu, stres yönetimi sertifikasına sahip, bilgisayar oyunları ile arası iyi olan insan kaynaklarına arkadaş arıyoruz.",
   },
@@ -39,7 +44,7 @@ const Career: BlitzPage = () => {
           <div className={style.list}>
             {openPositions.map((position) => {
               return (
-                <div className={style.item}>
+                <div className={style.item} key={position.id}>
                   <h4>{position.name}</h4>
                   <p>{position.desc}</p>
                 </div>

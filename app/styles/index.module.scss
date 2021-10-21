@@ -48,6 +48,10 @@ div.landingContent {
     padding-bottom: 0;
     margin-bottom: 1rem;
 
+    @media (max-width: 1300px) {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
     &.fullWidth {
       max-width: 100%;
     }
@@ -158,6 +162,9 @@ div.longLabels {
         text-decoration: line-through;
         font-weight: 700;
         color: $textColor;
+      }
+      @media (max-width: 1300px) {
+        font-size: 5rem;
       }
     }
   }

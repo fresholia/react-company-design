@@ -7,13 +7,14 @@ import logout from "app/auth/mutations/logout"
 import style from "app/styles/index.module.scss"
 
 type ServiceEnums = {
+  id: number
   icon: string
   title: string
 }
 
 const services: ServiceEnums[] = [
-  { icon: "</>", title: "Web Tasarım" },
-  { icon: "", title: "" },
+  { id: 1, icon: "</>", title: "Web Tasarım" },
+  { id: 2, icon: "", title: "" },
 ]
 
 const Services: BlitzPage = () => {
@@ -34,7 +35,7 @@ const Services: BlitzPage = () => {
           <div className={style.serviceItems}>
             {services.map((service) => {
               return (
-                <div className={style.item}>
+                <div className={style.item} key={service.id}>
                   <h2>{service.icon}</h2>
                   <span>{service.title}</span>
                 </div>

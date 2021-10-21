@@ -35,7 +35,22 @@ const Layout = ({ title, children }: LayoutProps) => {
       <Head>
         <title>{title || "inceptioncomtr"}</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src="/index.public.js" />
+        <meta name="title" content="Inception.com.tr - Bir oyundan daha fazlası" />
+        <meta
+          name="description"
+          content="Inception Roleplay oyunu GTA: San Andreas üzerinde rol yapmanızı sağlayan bir sunucudur. Oyun içerisinde polis, iş adamı, medyacı, doktor, çete, mafya olabilirsiniz. Yapacaklarınız tamamen hayalinize kalmış ve Amerika'da yaşıyorsunuz!"
+        />
+        <meta
+          name="keywords"
+          content="gta roleplay, mta roleplay, roleplay, inception roleplay, irp, mta, irp mta, gtasa roleplay, samp roleplay,  fivem roleplay, gta sa roleplay, roleplay oyunu, roleplay oyunlar, roleplaygame, roleplay game, irpmta, inceptionroleplay, Inception Roleplay, inception Roleplay, Inception roleplay"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no shrink-to-fit=no"
+        />
+        <meta name="robots" content="index" />
+        <meta name="language" content="Turkish" />
+        <meta name="author" content="github.com/cleoppa" />
       </Head>
       <div className={style.pageHeader}>
         <div className={style.logoSection}>
@@ -49,6 +64,7 @@ const Layout = ({ title, children }: LayoutProps) => {
                 return (
                   <div
                     className={style.navItem + (asPath == row.href ? " " + style.activeNav : "")}
+                    key={value}
                   >
                     <Link href={row.href}>
                       <a>{row.name}</a>
@@ -63,6 +79,7 @@ const Layout = ({ title, children }: LayoutProps) => {
                 return (
                   <div
                     className={style.navItem + (asPath == row.href ? " " + style.activeNav : "")}
+                    key={value}
                   >
                     <Link href={row.href}>
                       <a>{row.name}</a>

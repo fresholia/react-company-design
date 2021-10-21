@@ -6,16 +6,17 @@ import { SocialIcon } from "react-social-icons"
 import style from "app/styles/footer.module.scss"
 
 type socialItem = {
+  id: number
   icon: string
   href: string
 }
 
 const socialMediaLinks: socialItem[] = [
-  { icon: "instagram", href: "https://www.instagram.com/inceptionroleplay" },
-  { icon: "discord", href: "https://discord.gg/nMNXg45X" },
-  { icon: "youtube", href: "https://www.youtube.com/c/InceptionMedya/" },
-  { icon: "github", href: "https://github.com/inceptionnet" },
-  { icon: "linkedin", href: "#" },
+  { id: 1, icon: "instagram", href: "https://www.instagram.com/inceptionroleplay" },
+  { id: 2, icon: "discord", href: "https://discord.gg/nMNXg45X" },
+  { id: 3, icon: "youtube", href: "https://www.youtube.com/c/InceptionMedya/" },
+  { id: 4, icon: "github", href: "https://github.com/inceptionnet" },
+  { id: 5, icon: "linkedin", href: "#" },
 ]
 
 const Layout = () => {
@@ -32,7 +33,7 @@ const Layout = () => {
           <p className={style.noPaddingLabel}>
             Adres:{" "}
             <span>
-              Cumhuriyet Mah. Mahmut Bey Sok. NO:4/3 - Inception Game Productions Office,
+              Cumhuriyet Mah. Mahmut Bey Sok. No:4/3 - Inception Game Productions Office,
               Tekirdağ/TÜRKİYE
             </span>
           </p>
@@ -47,6 +48,7 @@ const Layout = () => {
                       url={item.href}
                       network={item.icon}
                       bgColor="#ffffff88"
+                      key={item.id}
                       style={{ height: 32, width: 32, marginRight: 25 }}
                     />
                   )
@@ -55,8 +57,8 @@ const Layout = () => {
             </div>
             <div className={style.content}>
               <p className={style.rightAligned}>
-                Inception 2010 yılında Tekirdağ'da start-up olarak kuruldu. Kurulduğundan bu yana
-                ekibini büyütmeye ve kendisini geliştirmeye devam ediyor.
+                Inception 2010 yılında start-up olarak kuruldu. Kurulduğundan bu yana ekibini
+                büyütmeye ve kendisini geliştirmeye devam ediyor.
               </p>
             </div>
           </div>
