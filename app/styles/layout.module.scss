@@ -10,113 +10,115 @@ div.linesbg {
 }
 
 div.pageHeader {
-    position: relative;
-    display: grid;
-    grid-template: 170px 60px / auto;
-    width: 100%;
-    height: 230px;
+  position: relative;
+  display: grid;
+  grid-template: 170px 60px / auto;
+  width: 100%;
+  height: 230px;
 
-    div.logoSection {
-        width: $maxWidth;
-        margin: 0 auto;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        svg {
-            width: 100%;
-            height: 100%;
-            path {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        @media (max-width: 1300px) {
-            & {
-                width: $minWidth;
-            }
-        }
-        @media (max-width: 800px) {
-            & {
-                width: 100%;
-            }
-        }
-    }
-    div.navsSection {
-        border-top: 1px solid #d4d1d1;
-        border-bottom: 1px solid #d4d1d1;
+  div.logoSection {
+    width: $maxWidth;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 100%;
+      height: 100%;
+      path {
         width: 100%;
         height: 100%;
-        div.navsPadding {
-            width: $maxWidth;
-            height: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            div.leftNavs {
-                display: flex;
-                float: left;
-            }
-            div.rightNavs {
-                display: flex;
-                float: right;
-            }
-
-            @media (max-width: 1300px) {
-                & {
-                    width: $minWidth;
-                }
-            }
-            @media (max-width: 800px) {
-                & {
-                    width: 100%;
-                }
-            }
-
-            div.navItem {
-                position: relative;
-                box-sizing: border-box;
-                height: 100%;
-                text-align: center;
-                
-                padding: 1rem;
-                margin-right: 1.5rem;
-
-                div.activeNav {
-                    opacity: 1;
-                }
-                
-                a {
-                    text-decoration: none;
-                    color: $textColor;
-                    font-weight: 400;
-                    font-size: 1.2rem;
-                }
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background: #212121;
-                    margin-top: 20px;
-                    transform: translate(-50%, -50%);
-                    opacity: 0;
-                    transition: .2s linear opacity;
-                   
-                }
-
-                &:hover {
-                    color: #000;
-
-                    &::before {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
+      }
     }
+
+    @media (max-width: 1300px) {
+      & {
+        width: $minWidth;
+      }
+    }
+    @media (max-width: 800px) {
+      & {
+        width: 100%;
+      }
+    }
+  }
+  div.navsSection {
+    border-top: 1px solid #d4d1d1;
+    border-bottom: 1px solid #d4d1d1;
+    width: 100%;
+    height: 100%;
+    div.navsPadding {
+      width: $maxWidth;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      div.leftNavs {
+        display: flex;
+        float: left;
+      }
+      div.rightNavs {
+        display: flex;
+        float: right;
+      }
+
+      @media (max-width: 1300px) {
+        & {
+          width: $minWidth;
+        }
+      }
+      @media (max-width: 800px) {
+        & {
+          width: 100%;
+        }
+      }
+
+      div.navItem {
+        position: relative;
+        box-sizing: border-box;
+        height: 100%;
+        text-align: center;
+
+        padding: 1rem;
+        margin-right: 1.5rem;
+
+        &.activeNav {
+          opacity: 1;
+          a {
+            font-weight: 600;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: $textColor;
+          font-weight: 400;
+          font-size: 1.2rem;
+        }
+        &::before {
+          content: " ";
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #212121;
+          margin-top: 20px;
+          transform: translate(-50%, -50%);
+          opacity: 0;
+          transition: 0.2s linear opacity;
+        }
+
+        &:hover {
+          color: #000;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

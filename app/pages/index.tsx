@@ -16,18 +16,24 @@ export async function getStaticProps(context) {
   const data = await res.json()
 
   return {
-    props: {data}
+    props: { data },
   }
 }
 
-const Home: BlitzPage<{}> = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const totalPlayersCount: number = data ? data.total : 0
   return (
     <React.Fragment>
       <div className="pageContent">
         <div className={style.landingContent}>
-          <h2 className={style.headerContent}>Oyunların ne kadar gerçekçi olabileceğini hayal edin.</h2>
-          <p className={style.contentLabel}>Multi Theft Auto oyun istemcisinin içerisinde gerçek hayatı oyuncularımıza yaşatıyoruz. Oyun gerçekçiliği hakkında sürekli çalışıyor ve belirli kurallar ile oyun hissini en doruklara çıkarıyoruz.</p>
+          <h2 className={style.headerContent}>
+            Oyunların ne kadar gerçekçi olabileceğini hayal edin.
+          </h2>
+          <p className={style.contentLabel}>
+            Multi Theft Auto oyun istemcisinin içerisinde gerçek hayatı oyuncularımıza yaşatıyoruz.
+            Oyun gerçekçiliği hakkında sürekli çalışıyor ve belirli kurallar ile oyun hissini en
+            doruklara çıkarıyoruz.
+          </p>
           <div className={style.onlinesContent}>
             <div className={style.greenDot}></div>
             <span>Hizmetlerimizi anlık olarak {totalPlayersCount} kişi kullanıyor.</span>
@@ -36,32 +42,41 @@ const Home: BlitzPage<{}> = ({ data }: InferGetStaticPropsType<typeof getStaticP
         </div>
 
         <div className={style.ourServices}>
-          <h4>hizmetlerimiz <span>(yoğunluğa göre sıralanır)</span> </h4>
+          <h4>
+            hizmetlerimiz <span>(yoğunluğa göre sıralanır)</span>{" "}
+          </h4>
           <div className={style.serverList}>
-            {
-              Object.keys(data).map(key => {
-                if (key != 'total') {
-                  const row = data[key];
-                  return (
-                    <div className={style.item}>
-                        <span>{row.name}</span>
-                        <p>Platform: {row.platform}</p>
-                        <p>Oyuncu: {row.players}</p>
-                        <p>IP: {row.ip}</p>
-                    </div>
-                  )
-                }
-              })
-            }
+            {Object.keys(data).map((key) => {
+              if (key != "total") {
+                const row = data[key]
+                return (
+                  <div className={style.item}>
+                    <span>{row.name}</span>
+                    <p>Platform: {row.platform}</p>
+                    <p>Oyuncu: {row.players}</p>
+                    <p>IP: {row.ip}</p>
+                  </div>
+                )
+              }
+            })}
           </div>
         </div>
         <div className={style.longLabels}>
           <div className={style.absolutePath}>
             <h2>WE ARE DEVELOP</h2>
-            <h2><span>ROLEPLAY</span> GAMES</h2>
+            <h2>
+              <span>ROLEPLAY</span> GAMES
+            </h2>
           </div>
           <h4>Neler yapıyoruz?</h4>
-          <p>Oyun sunucuları, internet sayfaları, afiş tasarımları veya sosyal medya asistanlığı. Aklınıza gelebilecek her türlü teknolojik işleri hallediyoruz. Çünkü biz teknolojiden geliyoruz. Örneğin, internetten ürün mü satmak istiyorsunuz? Sizin için ödeme sayfası oluşturalım, verginiz ve faturanız otomatik kesilsin, keyfinize bakın! Yeni çağın yükselen teknolojisinden ancak Inception'u bilenler faydalanır! Detaylı bilgi için bize mail göndermeyi unutmayın.</p>
+          <p>
+            Oyun sunucuları, internet sayfaları, afiş tasarımları veya sosyal medya asistanlığı.
+            Aklınıza gelebilecek her türlü teknolojik işleri hallediyoruz. Çünkü biz teknolojiden
+            geliyoruz. Örneğin, internetten ürün mü satmak istiyorsunuz? Sizin için ödeme sayfası
+            oluşturalım, verginiz ve faturanız otomatik kesilsin, keyfinize bakın! Yeni çağın
+            yükselen teknolojisinden ancak Inception'u bilenler faydalanır! Detaylı bilgi için bize
+            mail göndermeyi unutmayın.
+          </p>
         </div>
       </div>
     </React.Fragment>

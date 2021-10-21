@@ -1,144 +1,175 @@
 $textColor: #5c5c5c;
 
 div.landingContent {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d4d1d1;
+
+  div.onlinesContent {
+    position: relative;
     display: flex;
+    div.greenDot {
+      background: rgb(45, 195, 45);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      margin-right: 0.5rem;
+      animation: animateDot 1s infinite;
+
+      @keyframes animateDot {
+        0% {
+          background: rgb(45, 195, 45);
+        }
+        50% {
+          background: rgb(43, 114, 43);
+        }
+        100% {
+          background: rgb(45, 195, 45);
+        }
+      }
+    }
+    span {
+      margin: 0;
+      padding: 0;
+
+      margin-top: -4px;
+      font-weight: 500;
+    }
+  }
+
+  h2.headerContent {
+    font-size: 5rem;
+    max-width: 50%;
+    line-height: 6rem;
+    font-weight: 200;
+    padding-bottom: 0;
+    margin-bottom: 1rem;
+
+    &.fullWidth {
+      max-width: 100%;
+    }
+  }
+
+  p.contentLabel {
+    max-width: 40%;
+    padding-top: 0;
+    margin-top: 0;
+    color: $textColor;
+    &.fullWidth {
+      max-width: 75%;
+      text-align: left;
+    }
+  }
+
+  img.headerImage {
+    position: absolute;
+    right: 0;
+    margin-top: 4rem;
+  }
+
+  div.serviceItems {
+    position: relative;
     width: 100%;
-    flex-direction: column;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #d4d1d1;
-
-    div.onlinesContent {
-        position: relative;
-        display: flex;
-        div.greenDot {
-            background: rgb(45, 195, 45);
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            box-sizing: border-box;
-            margin-right: 0.5rem;
-            animation: animateDot 1s infinite;
-
-            @keyframes animateDot {
-                0% {
-                    background: rgb(45, 195, 45);
-                }
-                50% {
-                    background: rgb(43, 114, 43);
-                }
-                100% {
-                    background: rgb(45, 195, 45);
-                }
-            }
-        }
-        span {
-            margin: 0;
-            padding: 0;
-            
-            margin-top: -4px;
-            font-weight: 500;
-        }
+    height: auto;
+    display: flex;
+    div.item {
+      width: 128px;
+      height: 128px;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        font-weight: bold;
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+      }
     }
-
-    h2.headerContent {
-        font-size: 5rem;
-        max-width: 50%;
-        line-height: 6rem;
-        font-weight: 200;
-        padding-bottom: 0;
-        margin-bottom: 1rem;
-    }
-
-    p.contentLabel {
-        max-width: 40%;
-        padding-top: 0;
-        margin-top: 0;
-        color: $textColor;
-    }
-
-    img.headerImage {
-        position: absolute;
-        right: 0;
-        margin-top: 4rem;
-    }
+  }
 }
 
 div.ourServices {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-bottom: 1px solid #d4d1d1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid #d4d1d1;
 
-    h4 {
-        font-weight: 600;
+  h4 {
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
+    span {
+      color: #d4d1d1;
+      font-weight: 200;
+      font-size: 1rem;
+    }
+  }
+
+  div.serverList {
+    position: relative;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    div.item {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      margin-right: 3rem;
+      span {
+        font-weight: 300;
         font-size: 2rem;
+      }
+      p {
         padding: 0;
         margin: 0;
-        margin-top: 1rem;
-        span {
-            color: #d4d1d1;
-            font-weight: 200;
-            font-size: 1rem;
-        }
+        color: $textColor;
+      }
     }
-
-    div.serverList {
-        position: relative;
-        display: flex;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-
-        div.item {
-            display: flex;
-            flex-direction: column;
-            box-sizing: border-box;
-            margin-right: 3rem;
-            span {
-                font-weight: 300;
-                font-size: 2rem;
-            }
-            p {
-                padding: 0;
-                margin: 0;
-                color: $textColor;
-            }
-        }
-    }
+  }
 }
 
 div.longLabels {
-    position: relative;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid #d4d1d1;
-    div.absolutePath {
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #d4d1d1;
+  div.absolutePath {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
-        h2 {
-            width: 100%;
-            font-size: 9rem;
-            padding: 0;
-            margin: 0;
-            margin-bottom: -40px;
-            span {
-                text-decoration: line-through;
-                font-weight: 700;
-                color: $textColor;
-            }
-        }
-    }
-    h4 {
-        width: 100%;
-        font-weight: 400;
-        text-align: center;
-        font-size: 2rem;
-    }
-    p {
-        max-width: 70%;
-        margin: 0 auto;
+    h2 {
+      width: 100%;
+      font-size: 9rem;
+      padding: 0;
+      margin: 0;
+      margin-bottom: -40px;
+      span {
+        text-decoration: line-through;
+        font-weight: 700;
         color: $textColor;
+      }
     }
+  }
+  h4 {
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+    font-size: 2rem;
+  }
+  p {
+    max-width: 70%;
+    margin: 0 auto;
+    color: $textColor;
+  }
 }
