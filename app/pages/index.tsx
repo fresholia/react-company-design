@@ -26,19 +26,27 @@ const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <React.Fragment>
       <div className="pageContent">
         <div className={style.landingContent}>
-          <h2 className={style.headerContent}>
-            Oyunların ne kadar gerçekçi olabileceğini hayal edin.
-          </h2>
-          <p className={style.contentLabel}>
-            Multi Theft Auto oyun istemcisinin içerisinde gerçek hayatı oyuncularımıza yaşatıyoruz.
-            Oyun gerçekçiliği hakkında sürekli çalışıyor ve belirli kurallar ile oyun hissini en
-            doruklara çıkarıyoruz.
-          </p>
-          <div className={style.onlinesContent}>
-            <div className={style.greenDot}></div>
-            <span>Hizmetlerimizi anlık olarak {totalPlayersCount} kişi kullanıyor.</span>
+          <div className={style.gridLayout}>
+            <div className={style.gridItem}>
+              <h2 className={style.headerContent}>
+                Oyunların ne kadar gerçekçi olabileceğini hayal edin.
+              </h2>
+              <p className={style.contentLabel}>
+                Multi Theft Auto oyun istemcisinin içerisinde gerçek hayatı oyuncularımıza
+                yaşatıyoruz. Oyun gerçekçiliği hakkında sürekli çalışıyor ve belirli kurallar ile
+                oyun hissini en doruklara çıkarıyoruz.
+              </p>
+              <div className={style.onlinesContent}>
+                <div className={style.greenDot}></div>
+                <span>Hizmetlerimizi anlık olarak {totalPlayersCount} kişi kullanıyor.</span>
+              </div>
+            </div>
+            <div className={style.gridItem + " " + style.flex}>
+              <div className={style.headerImage}>
+                <Image src="/right-content.png" alt="Content image" width="401" height="450" />
+              </div>
+            </div>
           </div>
-          <Image className={style.headerImage} src="right-content.png" alt="Content image" />
         </div>
 
         <div className={style.ourServices}>

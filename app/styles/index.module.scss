@@ -7,6 +7,27 @@ div.landingContent {
   padding-bottom: 1rem;
   border-bottom: 1px solid #d4d1d1;
 
+  div.gridLayout {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    @media (max-width: 800px) {
+      & {
+        grid-template-columns: auto;
+      }
+    }
+    div.gridItem {
+      width: 100%;
+      height: 100%;
+      &.flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
   div.onlinesContent {
     position: relative;
     display: flex;
@@ -42,7 +63,7 @@ div.landingContent {
 
   h2.headerContent {
     font-size: 5rem;
-    max-width: 50%;
+    max-width: 70%;
     line-height: 6rem;
     font-weight: 200;
     padding-bottom: 0;
@@ -58,7 +79,7 @@ div.landingContent {
   }
 
   p.contentLabel {
-    max-width: 40%;
+    max-width: 60%;
     padding-top: 0;
     margin-top: 0;
     color: $textColor;
@@ -68,10 +89,21 @@ div.landingContent {
     }
   }
 
-  img.headerImage {
-    position: absolute;
-    right: 0;
-    margin-top: 4rem;
+  div.headerImage {
+    width: 401px;
+    height: 450px;
+    @media (max-width: 1300px) {
+      width: 251px;
+      height: 300px;
+    }
+    @media (max-width: 800px) {
+      & {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 200px;
+        height: 225px;
+      }
+    }
   }
 
   div.serviceItems {
@@ -131,11 +163,19 @@ div.ourServices {
       span {
         font-weight: 300;
         font-size: 2rem;
+        @media (max-width: 1300px) {
+          & {
+            font-size: 1.5rem;
+          }
+        }
       }
       p {
         padding: 0;
         margin: 0;
         color: $textColor;
+        @media (max-width: 1300px) {
+          font-size: 0.8rem;
+        }
       }
     }
   }
