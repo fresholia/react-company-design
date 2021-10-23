@@ -24,13 +24,13 @@
     ]
   },
   "dependencies": {
-    "@prisma/client": "3.x",
-    "blitz": "0.41.1",
-    "final-form": "4.20.4",
     "react": "alpha",
     "react-dom": "alpha",
     "react-final-form": "6.5.7",
     "react-social-icons": "5.6.1",
+    "@prisma/client": "3.x",
+    "blitz": "0.41.1",
+    "final-form": "4.20.4",
     "sass": "1.43.2",
     "zod": "3.x"
   },
