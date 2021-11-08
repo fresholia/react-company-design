@@ -1,10 +1,9 @@
 import React from "react"
-import { BlitzPage } from "blitz"
 import Layout from "src/core/layouts/Layout"
 
 import style from "src/styles/index.module.scss"
 
-const Blog: BlitzPage = () => {
+const Blog = () => {
   return (
     <React.Fragment>
       <div className="pageContent"></div>
