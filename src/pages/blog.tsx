@@ -1,8 +1,8 @@
 import React from "react"
 import { BlitzPage } from "blitz"
-import Layout from "app/core/layouts/Layout"
+import Layout from "src/core/layouts/Layout"
 
-import style from "app/styles/index.module.scss"
+import style from "src/styles/index.module.scss"
 
 const Blog: BlitzPage = () => {
   return (

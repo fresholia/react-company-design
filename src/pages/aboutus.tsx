@@ -1,10 +1,7 @@
 import React from "react"
-import { Image, Link, BlitzPage, useMutation, Routes, InferGetStaticPropsType } from "blitz"
-import Layout from "app/core/layouts/Layout"
-import { useCurrentUser } from "app/core/hooks/useCurrentUser"
-import logout from "app/auth/mutations/logout"
-
-import style from "app/styles/aboutus.module.scss"
+import Layout from "src/core/layouts/Layout"
+import Image from "next/image"
+import style from "src/styles/aboutus.module.scss"
 
 type Worker = {
   id: number
@@ -45,7 +42,7 @@ const workers: Worker[] = [
   },
 ]
 
-const About: BlitzPage = () => {
+const About = () => {
   return (
     <React.Fragment>
       <div className="pageContent">

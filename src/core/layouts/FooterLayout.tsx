@@ -1,9 +1,8 @@
 import React, { ReactNode } from "react"
-import { Head, useRouter, Link } from "blitz"
 
-import Logo from "app/core/layouts/Logo"
+import Logo from "src/core/layouts/Logo"
 import { SocialIcon } from "react-social-icons"
-import style from "app/styles/footer.module.scss"
+import style from "src/styles/footer.module.scss"
 
 type socialItem = {
   id: number

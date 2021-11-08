@@ -1,15 +1,8 @@
 import React from "react"
-import { Image, Link, BlitzPage, useMutation, Routes, InferGetStaticPropsType } from "blitz"
-import Layout from "app/core/layouts/Layout"
-import { useCurrentUser } from "app/core/hooks/useCurrentUser"
-import logout from "app/auth/mutations/logout"
+import Image from "next/image"
+import Layout from "src/core/layouts/Layout"
 
-import style from "app/styles/index.module.scss"
-
-const UserInfo = () => {
-  const currentUser = useCurrentUser()
-  const [logoutMutation] = useMutation(logout)
-}
+import style from "src/styles/index.module.scss"
 
 export async function getStaticProps(context) {
   const res = await fetch("https://www.inception.com.tr/api/v1/game/total_players.php")
@@ -20,7 +13,7 @@ export async function getStaticProps(context) {
   }
 }
 
-const Home = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home = ({ data }) => {
   const totalPlayersCount: number = data ? data.total : 0
   return (
     <React.Fragment>

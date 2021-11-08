@@ -1,9 +1,14 @@
 import { ReactNode } from "react"
-import { Head, useRouter, Link } from "blitz"
 
-import style from "app/styles/layout.module.scss"
+import Head from "next/head"
 
-import Logo from "app/core/layouts/Logo"
+import Link from "next/link"
+
+import { useRouter } from "next/router"
+
+import style from "src/styles/layout.module.scss"
+
+import Logo from "src/core/layouts/Logo"
 
 type LayoutProps = {
   title?: string

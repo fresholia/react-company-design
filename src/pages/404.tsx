@@ -1,4 +1,4 @@
-import { Head, ErrorComponent } from "blitz"
+import Head from "next/head"
 
 // ------------------------------------------------------
 // This page is rendered if a route match is not found
@@ -13,7 +13,8 @@ export default function Page404() {
           {statusCode}: {title}
         </title>
       </Head>
-      <ErrorComponent statusCode={statusCode} title={title} />
+      <h2>Error: {statusCode}</h2>
+      <p>{title}</p>
     </>
   )
 }
