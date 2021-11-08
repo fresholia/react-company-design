@@ -1,12 +1,9 @@
 import React from "react"
-import { Image, Link, BlitzPage, useMutation, Routes, InferGetStaticPropsType } from "blitz"
 import Layout from "src/core/layouts/Layout"
-import { useCurrentUser } from "src/core/hooks/useCurrentUser"
-import logout from "src/auth/mutations/logout"
 
 import style from "src/styles/contactus.module.scss"
 
-const Contact: BlitzPage = () => {
+const Contact = () => {
   return (
     <React.Fragment>
       <div className="pageContent">
