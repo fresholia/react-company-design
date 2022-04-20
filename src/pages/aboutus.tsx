@@ -14,31 +14,10 @@ type Worker = {
 const workers: Worker[] = [
   {
     id: 1,
-    image: "wp_content/bt.jpg",
-    name: "Batuhan Tonga",
-    badge: "Manager",
-    desc: "Şirket işleyişi ve geleceğiyle ilgili işlerden sorumlu. Inception'u 2010 yılında kurdu, 2017 yılında resmileştirdi.",
-  },
-  {
-    id: 2,
-    image: "wp_content/ea.jpg",
-    name: "Enes Akıllıok",
-    badge: "Development Team Leader",
-    desc: "Inception'un teknolojik adamı. Tüm sunuculara, kodlara bu adam bakıyor. 2017 yılından beri Inception'da çalışıyor.",
-  },
-  {
-    id: 3,
-    image: "wp_content/fo.jpg",
-    name: "Furkan Özulus",
-    badge: "Lua Developer",
-    desc: "Front-End ve Back-End geliştiricisi. Teknik işlerden iyi anladığı gibi her iki alanda da fazla başarılı.",
-  },
-  {
-    id: 4,
-    image: "wp_content/bs.jpg",
-    name: "Burak Serdal",
-    badge: "Human Resources",
-    desc: "Topluluk ile ilgileniyor, yardımcı oluyor. Aynı zamanda oyun evrenini kontrol ediyor, yönetiminde bulunuyor.",
+    image: "",
+    name: "David Beckham",
+    badge: "CEO",
+    desc: "He is rockstar.",
   },
 ]
 
